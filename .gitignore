@@ -1,3 +1,5 @@
+.DS_Store
+
 # Compiled Object files, Static and Dynamic libs (Shared Objects)
 *.o
 *.a
@@ -76,3 +78,8 @@ prime/
 *.snap
 *.snap-build
 *_source.tar.bz2
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml

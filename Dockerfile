@@ -15,13 +15,15 @@ COPY . ${GOPATH}/src/code.gitea.io/gitea
 WORKDIR ${GOPATH}/src/code.gitea.io/gitea
 
 #Checkout version if set
-RUN if [ -n "${GITEA_VERSION}" ]; then git checkout "${GITEA_VERSION}"; fi \
- && make clean generate build
+# RUN if [ -n "${GITEA_VERSION}" ]; then git checkout "${GITEA_VERSION}"; fi \
+#  && make clean generate build
+
+RUN make clean generate build
 
 FROM alpine:3.9
 LABEL maintainer="maintainers@gitea.io"
 
-EXPOSE 22 3000
+EXPOSE 3000 22
 
 RUN apk --no-cache add \
     bash \
