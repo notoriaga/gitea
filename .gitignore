@@ -83,3 +83,4 @@ prime/
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
+!.elasticbeanstalk/storage-efs-mountfilesystem.config
