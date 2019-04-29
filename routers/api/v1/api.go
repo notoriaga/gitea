@@ -178,7 +178,8 @@ func reqToken() macaron.Handler {
 			return
 		}
 		if ctx.IsSigned {
-			ctx.RequireCSRF()
+			// STEVE: This disables cross site protection
+			// ctx.RequireCSRF()
 			return
 		}
 		ctx.Context.Error(401)
